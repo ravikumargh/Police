@@ -10,6 +10,13 @@
   function menuConfig(menuService) {
     menuService.addMenuItem('topbar', {
       title: 'Articles',
+      state: 'articles.list',      
+      roles: ['*']
+    });
+
+    /*
+     menuService.addMenuItem('topbar', {
+      title: 'Articles',
       state: 'articles',
       type: 'dropdown',
       roles: ['*']
@@ -21,5 +28,6 @@
       state: 'articles.list',
       roles: ['*']
     });
+    */
   }
 }());

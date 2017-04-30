@@ -1,0 +1,236 @@
+<section>
+    <div class="page-header">
+        <h1>FAQ</h1>
+    </div>
+    <div class="col-md-12">
+        <script type="text/ng-template" id="group-template.html">
+            <div class="panel-heading">
+                <h4 class="panel-title" style="color:#fa39c3">
+                    <a href tabindex="0" class="accordion-toggle" ng-click="toggleOpen()" uib-accordion-transclude="heading">
+                        <span uib-accordion-header ng-class="{'text-muted': isDisabled}">
+            {{heading}}
+          </span>
+                    </a>
+                </h4>
+            </div>
+            <div class="panel-collapse collapse" uib-collapse="!isOpen">
+                <div class="panel-body" style="text-align: right" ng-transclude></div>
+            </div>
+        </script>
+
+
+
+
+        <uib-tabset active="active">
+            <uib-tab index="0" heading="Common">
+                <uib-accordion>
+                    <div uib-accordion-group class="panel-default">
+                        <uib-accordion-heading>
+                            What should I do in case of loss of a vehicle?<i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
+                        </uib-accordion-heading>
+                        Register a complaint in the nearest police station with all details and relevant documents. Later be in touch with the Police
+                        Station and lost and found vehicles page on this Website.
+                    </div>
+                    <div uib-accordion-group class="panel-default" is-open="status.open">
+                        <uib-accordion-heading>
+                            How can I help a woman or child in distress? <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
+                        </uib-accordion-heading>
+                        <ul>
+                            <li>Call 100</li>
+                            <li>Call child helpline on 1098</li>
+                            <li>Inform the nearest police station</li>
+                        </ul>
+                    </div>
+                    <div uib-accordion-group class="panel-default">
+                        <uib-accordion-heading>
+                            What should I do if I have to give information about an offence or an accident?<i class="pull-right glyphicon"
+                                ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
+                        </uib-accordion-heading>
+                        <ul>
+                            <li>Call 100</li>
+                            <li>Contact nearest police station given on find your police page</li>
+                            <li>Call any of the police officers whose contact information have been given on find your police
+                                station page
+                            </li>
+                            <li>Go to the nearest police station and inform.</li>
+                        </ul>
+                    </div>
+                    <div uib-accordion-group class="panel-default">
+                        <uib-accordion-heading>
+                            In case of an emergency, what should I do?<i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
+                        </uib-accordion-heading>
+                        <ul>
+                            <li>Call 100</li>
+                            <li>Click Police Stations/Our Officers menu&nbsp;in&nbsp;the website for telephone numbers of the
+                                police officers
+                            </li>
+                        </ul>
+                    </div>
+                </uib-accordion>
+
+            </uib-tab>
+
+            <uib-tab index="$index + 1" heading="Crime FAQ">
+                <uib-accordion>
+                    <div uib-accordion-group class="panel-default">
+                        <uib-accordion-heading>
+                            How do I lodge a NC complaint?<i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
+                        </uib-accordion-heading>
+                        Information about such offences is to be given in a similar manner as explained under F.I.R. The officer in-charge would
+                        reduce the complaint in writing (about commission of Non cognizable offence) and give a copy thereof
+                        to the complainant free of cost. No police officer can investigate a non-cognizable case unless he
+                        obtains prior permission of a Magistrate having power to try such case.
+                    </div>
+                    <div uib-accordion-group class="panel-default" is-open="status.open">
+                        <uib-accordion-heading>
+                            What is meant by a complaint? <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
+                        </uib-accordion-heading>
+                        Complaint means any allegation made orally or in writing to a Magistrate, with a view to his taking action under the code
+                        of criminal procedure (1973), that some person (whether known or unknown), has committed an offense.
+                    </div>
+                    <div uib-accordion-group class="panel-default">
+                        <uib-accordion-heading>
+                            What is a Non cognizable offense?<i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
+                        </uib-accordion-heading>
+                        Non cognizable offence means in which a police officer has no authority to arrest without warrant.
+                    </div>
+                    <div uib-accordion-group class="panel-default">
+                        <uib-accordion-heading>
+                            What is the meaning of the term taking cognizance?<i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
+                        </uib-accordion-heading>
+                        The term taking cognizance has not been defined in Code of Criminal Procedure. When any Magistrate takes cognizance under
+                        section 190 (1) (a) Cr.P.C., he must not only have applied his mind to the contents of the petition,
+                        but he must have done so for the purpose of proceeding in a particular way as per procedure prescribed
+                        in the Cr.P.C., and there after sending the complaint for further enquiry. A magistrate can also
+                        order investigations under section 156(3) of Cr.P.C.
+                    </div>
+                    <div uib-accordion-group class="panel-default">
+                        <uib-accordion-heading>
+                            What is a cognizable case or what is cognizable offense?<i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
+                        </uib-accordion-heading>
+                        A cognizable case means a case in which a police officer may, in accordance with the First Schedule of Cr.P.C. (1973), or
+                        under any other law for the time being in force, arrest without warrant.
+                    </div>
+
+                    <div uib-accordion-group class="panel-default">
+                        <uib-accordion-heading>
+                            How do I lodge F.I.R.?<i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
+                        </uib-accordion-heading>
+                        The informant/ complainant should go to the police station having jurisdiction over the area (where the offence is committed)
+                        and report to officer in-charge/ station house officer about commission of a cognizable offence.
+                        In case information is given on telephone, the informant / complainant should subsequently go to
+                        the police station for registration of F.I.R.
+                    </div>
+                    <div uib-accordion-group class="panel-default">
+                        <uib-accordion-heading>
+                            What is an F.I.R?<i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
+                        </uib-accordion-heading>
+                        F.I.R. means First Information Report, made to police, about commission of a cognizable offence, In effect, it amounts to
+                        putting law in to motion by giving information relating to the commission of a cognizable offence
+                        to an officer in charge of a police station, (which shall be reduced into writing and read over to
+                        the informant) and shall be signed by the person giving such information. It is mandatory to give
+                        a copy of the first information report (as recorded by police) to the complainant or informant free
+                        of cost.
+                    </div>
+
+                </uib-accordion>
+
+            </uib-tab>
+            <uib-tab index="3">
+                <uib-tab-heading>
+                    PCC FAQ
+                </uib-tab-heading>
+
+                <uib-accordion>
+                    <div uib-accordion-group class="panel-default">
+                        <uib-accordion-heading>
+                            Who is Eligible to apply for PVC/PCC?<i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
+                        </uib-accordion-heading>
+                        All Indian/Foreign Nationals residing in Bangalore Police Commissionarate limits can apply for PVC/PCC.
+                    </div>
+                    <div uib-accordion-group class="panel-default" is-open="status.open">
+                        <uib-accordion-heading>
+                            What are the documents required for PVC/PCC?<i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
+                        </uib-accordion-heading>
+                        <ul class="dt-sc-fancy-list caret" style="text-align: justify;">
+                            <li><span style="font-size: 12pt;">Original Passport and Xerox Copy of all pages (Mandatory Document for PCC)</span></li>
+                            <li><span style="font-size: 12pt;">Voter ID Card</span></li>
+                            <li><span style="font-size: 12pt;">Gas Connection Card</span></li>
+                            <li><span style="font-size: 12pt;">Aadhar Card</span></li>
+                            <li><span style="font-size: 12pt;">Residential Certificate issued by Tahasildhar</span></li>
+                            <li><span style="font-size: 12pt;">Driving License</span></li>
+                            <li><span style="font-size: 12pt;">Bank Statement (One Year)</span></li>
+                            <li><span style="font-size: 12pt;">Water Bill</span></li>
+                            <li><span style="font-size: 12pt;">Electric City Bill</span></li>
+                            <li><span style="font-size: 12pt;">Ration Card</span></li>
+                            <li><span style="font-size: 12pt;">Original Certificate from employer of the Public limited company</span></li>
+                            <li><span style="font-size: 12pt;">Registered Rental Agreement</span></li>
+                            <li><span style="font-size: 12pt;">Telephone Bill(Landline or postpaid mobile bill)</span></li>
+                            <li><span style="font-size: 12pt;">Three Passport Size Photographs (Mandatory)</span></li>
+                        </ul>
+                    </div>
+                    <div uib-accordion-group class="panel-default">
+                        <uib-accordion-heading>
+                            Identification Proof<i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
+                        </uib-accordion-heading>
+                        <ul class="dt-sc-fancy-list caret" style="text-align: justify;">
+                            <li><span style="font-size: 12pt;">Passport</span></li>
+                            <li><span style="font-size: 12pt;">PAN Card</span></li>
+                            <li><span style="font-size: 12pt;">Driving License</span></li>
+                            <li><span style="font-size: 12pt;">Voter ID Card</span></li>
+                        </ul>
+                    </div>
+                    <div uib-accordion-group class="panel-default">
+                        <uib-accordion-heading>
+                            Date of Birth Proof<i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
+                        </uib-accordion-heading>
+                        <ul class="dt-sc-fancy-list caret">
+                            <li style="text-align: justify;"><span style="font-size: 12pt;">Passport</span></li>
+                            <li style="text-align: justify;"><span style="font-size: 12pt;">SSLC Marks Card</span></li>
+                            <li style="text-align: justify;"><span style="font-size: 12pt;">Birth Certificate</span></li>
+                        </ul>
+                    </div>
+                    <div uib-accordion-group class="panel-default">
+                        <uib-accordion-heading>
+                            How to apply for PVC/PCC?<i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
+                        </uib-accordion-heading>
+                        Fill your personal particulars and submit the application form at the office of the SP Office, Chikkamagaluru. Companies/Schools/Other
+                        Establishments can Submit applications in bulk through one of their employee.
+                    </div>
+
+                    <div uib-accordion-group class="panel-default">
+                        <uib-accordion-heading>
+                            I am an Indian National Staying abroad, How can I get PCC/PVC?<i class="pull-right glyphicon"
+                                ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
+                        </uib-accordion-heading>
+                        Please refer to “PCC for Indian Nationals Staying Abroad” link <a href="http://udupipolice.org/SPUDUPI/pcc.php"> Police Clearance Certificate&nbsp;</a>
+                    </div>
+                    <div uib-accordion-group class="panel-default">
+                        <uib-accordion-heading>
+                            I am an Foreign National Staying abroad, How can I get PCC/PVC?<i class="pull-right glyphicon"
+                                ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
+                        </uib-accordion-heading>
+                        Please refer to “PCC for Foreigners Staying in Bangalore” link <a href="http://udupipolice.org/SPUDUPI/pcc.php"> Police Clearance Certificate</a>
+                    </div>
+                    <div uib-accordion-group class="panel-default">
+                        <uib-accordion-heading>
+                            How much time it takes to get PVC/PCC after applying?<i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
+                        </uib-accordion-heading>
+                        21 Working Days (subjected to receipt of police verification reports from the jurisdictional police stations)
+                    </div>
+                    <div uib-accordion-group class="panel-default">
+                        <uib-accordion-heading>
+                            Where should I pay chalan?<i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
+                        </uib-accordion-heading>
+                        In Chikkamagaluru SP office
+                    </div>
+                </uib-accordion>
+
+            </uib-tab>
+
+        </uib-tabset>
+        <p><span style="font-size: 10pt;"><em>Content Courtesy: Bengaluru City Police</em></span></p>
+    </div>
+
+
+</section>

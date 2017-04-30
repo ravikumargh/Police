@@ -1,4 +1,7 @@
 <div class="container" ng-controller="HeaderController as vm">
+<!--<div class="hidden-xs"><div>Call us: 08262 230403</div></div>-->
+
+
   <div class="navbar-header">
     <button class="navbar-toggle" type="button" ng-click="vm.isCollapsed = !vm.isCollapsed">
       <span class="sr-only">Toggle navigation</span>
@@ -6,7 +9,15 @@
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
     </button>
-    <a ui-sref="home" class="navbar-brand">MEAN.JS</a>
+    <a ui-sref="home" class="navbar-brand hidden-xs">Home</a>
+    <a ui-sref="home" class="navbar-brand visible-xs" id="logo-main">
+      <div class="pull-left"><img id="logo-sm-white" src="/modules/core/client/img/logo-sm-white.png" /></div>
+      <div class="logo-text pull-left">
+        <div aria-hidden="true">ಬೆಂಗಳೂರು ನಗರ ಪೊಲೀಸ್</div>
+        <div aria-hidden="true">Bangalore City Police</div>
+      </div>
+    </a>
+    
   </div>
   <nav class="navbar-collapse" uib-collapse="!vm.isCollapsed" role="navigation">
     <ul class="nav navbar-nav" ng-if="vm.menu.shouldRender(vm.authentication.user);">

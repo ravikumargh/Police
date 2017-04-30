@@ -1,0 +1,17 @@
+{ 
+      
+    "salt" : "rRQuzR64PGmmeFDiFU0R2w==", 
+    "displayName" : "Ravi kumar", 
+    "provider" : "local", 
+    "username" : "ravikumargh13", 
+     
+    "roles" : [
+        "user", 
+        "admin"
+    ], 
+    "profileImageURL" : "modules/users/client/img/profile/default.png", 
+    "password" : "EktoxB+AigQNgiWOOVNgWS3RD+3zYc3uBX8om1y4GIdCjhGas7o18xncUqqzNDv7T1EtMdiZB9zFMuV9YAUuxA==", 
+    "email" : "ravikumargh13@gmail.com", 
+    "lastName" : "kumar", 
+    "firstName" : "Ravi" 
+}
