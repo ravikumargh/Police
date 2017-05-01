@@ -1,0 +1,78 @@
+
+.navbar-head-new {
+  background-color: #e74c3c;
+  border-color: #c0392b;
+  background-image: none;
+}
+.navbar-head-new .navbar-brand {
+  color: #ecf0f1;
+}
+.navbar-head-new .navbar-brand:hover,
+.navbar-head-new .navbar-brand:focus {
+  color: #ffbbbc;
+}
+.navbar-head-new .navbar-text {
+  color: #ecf0f1;
+}
+.navbar-head-new .navbar-nav > li > a {
+  color: #ecf0f1;
+}
+.navbar-head-new .navbar-nav > li > a:hover,
+.navbar-head-new .navbar-nav > li > a:focus {
+  color: #ffbbbc;
+}
+.navbar-head-new .nav > li > a:hover, 
+.navbar-head-new .nav > li > a:focus
+.navbar-head-new .navbar-nav > .active > a,
+.navbar-head-new .navbar-nav > .active > a:hover,
+.navbar-head-new .navbar-nav > .active > a:focus {
+  color: #ffbbbc;
+  background-color: #c0392b;
+  background-image: none;
+}
+.navbar-head-new .navbar-nav > .open > a,
+.navbar-head-new .navbar-nav > .open > a:hover,
+.navbar-head-new .navbar-nav > .open > a:focus {
+  color: #ffbbbc;
+  background-color: #c0392b;
+  background-image: none;
+}
+.navbar-head-new .navbar-toggle {
+  border-color: #c0392b;
+  background-image: none;
+}
+.navbar-head-new .navbar-toggle:hover,
+.navbar-head-new .navbar-toggle:focus {
+  background-color: #c0392b;
+  background-image: none;
+}
+.navbar-head-new .navbar-toggle .icon-bar {
+  background-color: #ecf0f1;
+}
+.navbar-head-new .navbar-collapse,
+.navbar-head-new .navbar-form {
+  border-color: #ecf0f1;
+}
+.navbar-head-new .navbar-link {
+  color: #ecf0f1;
+}
+.navbar-head-new .navbar-link:hover {
+  color: #ffbbbc;
+}
+
+@media (max-width: 767px) {
+  .navbar-head-new .navbar-nav .open .dropdown-menu > li > a {
+    color: #ecf0f1;
+  }
+  .navbar-head-new .navbar-nav .open .dropdown-menu > li > a:hover,
+  .navbar-head-new .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: #ffbbbc;
+  }
+  .navbar-head-new .navbar-nav .open .dropdown-menu > .active > a,
+  .navbar-head-new .navbar-nav .open .dropdown-menu > .active > a:hover,
+  .navbar-head-new .navbar-nav .open .dropdown-menu > .active > a:focus {
+    color: #ffbbbc;
+    background-color: #c0392b;
+    background-image: none;
+  }
+}

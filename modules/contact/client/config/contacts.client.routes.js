@@ -19,6 +19,14 @@
           pageTitle: 'Contact Us'
         }
       })
+      .state('traffic', {
+        url: '/traffic',
+        templateUrl: '/modules/contact/client/views/view-traffic.client.view.html',
+        controllerAs: 'vm',
+        data: {
+          pageTitle: 'Trafic'
+        }
+      })
       .state('aboutus', {
         url: '/aboutus',
         templateUrl: '/modules/contact/client/views/view-aboutus.client.view.html',

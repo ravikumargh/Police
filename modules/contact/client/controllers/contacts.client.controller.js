@@ -12,6 +12,7 @@
     vm.form = {};
     vm.authentication = Authentication;
     vm.save = save;
+    vm.isCollapsed = false;
 
     // Save Contact
     function save(isValid) {
@@ -36,10 +37,11 @@
 
     
     }
-
+    //RTI
   $('#myTabs a').click(function (e) {
         e.preventDefault()
         $(this).tab('show')
       });
   };
+ 
 }());
