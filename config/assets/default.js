@@ -12,7 +12,8 @@ module.exports = {
         'public/lib/angular-ui-notification/dist/angular-ui-notification.css',
         'public/lib/slippry/dist/slippry.css',
         'public/lib/components-font-awesome/css/font-awesome.css',
-        'public/lib/textAngular/dist/textAngular.css'
+        'public/lib/textAngular/dist/textAngular.css',
+        'public/lib/lightgallery/src/css/lightgallery.css'
         // endbower
       ],
       js: [
@@ -32,6 +33,7 @@ module.exports = {
         'public/lib/textAngular/dist/textAngular-rangy.min.js',
         'public/lib/textAngular/dist/textAngular-sanitize.min.js',
         'public/lib/textAngular/dist/textAngular.min.js',
+        'public/lib/lightgallery/src/js/lightgallery.js',
         // endbower
       ],
       tests: ['public/lib/angular-mocks/angular-mocks.js']

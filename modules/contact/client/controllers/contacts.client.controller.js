@@ -26,14 +26,14 @@
         .then(successCallback)
         .catch(errorCallback);
 
-      // function successCallback(res) {
-      //   $state.go('admin.contacts.list'); // should we send the User to the list or the updated Contact's view?
-      //   Notification.success({ message: '<i class="glyphicon glyphicon-ok"></i> Contact saved successfully!' });
-      // }
+      function successCallback(res) {
+        // $state.go('admin.contacts.list'); // should we send the User to the list or the updated Contact's view?
+        // Notification.success({ message: '<i class="glyphicon glyphicon-ok"></i> Contact saved successfully!' });
+      }
 
-      // function errorCallback(res) {
-      //   Notification.error({ message: res.data.message, title: '<i class="glyphicon glyphicon-remove"></i> Contact save error!' });
-      // }
+      function errorCallback(res) {
+        // Notification.error({ message: res.data.message, title: '<i class="glyphicon glyphicon-remove"></i> Contact save error!' });
+      }
 
     
     }
