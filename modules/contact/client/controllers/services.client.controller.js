@@ -1,18 +1,18 @@
-(function () {
-  'use strict';
+// (function () {
+//   'use strict';
 
-  angular
-    .module('services')
-    .controller('ServicesController', ServicesController);
+//   angular
+//     .module('services')
+//     .controller('ServicesController', ServicesController);
 
-  ServicesController.$inject = ['$scope', 'Authentication'];
+//   ServicesController.$inject = ['$scope', 'Authentication'];
 
-  function ServicesController($scope, Authentication) {
-    var vm = this;
+//   function ServicesController($scope, Authentication) {
+//     var vm = this;
     
-    vm.isCollapsed = false;
+//     vm.isCollapsed = false;
  
-    }
+//     }
      
  
-}());
+// }());
