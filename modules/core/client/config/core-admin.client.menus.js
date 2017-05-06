@@ -14,5 +14,11 @@
       type: 'dropdown',
       roles: ['admin']
     });
+    //  menuService.addMenuItem('topbar', {
+    //   title: 'More',
+    //   state: 'more',
+    //   type: 'dropdown',
+    //   roles: ['*']
+    // });
   }
 }());

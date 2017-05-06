@@ -13,3 +13,7 @@
   height: 28px;
   width: 28px;
 }
+#lightgallery{
+   overflow: auto;
+   width: 100%;
+}

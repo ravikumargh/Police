@@ -15,7 +15,6 @@
         controller: 'GalleryController',
         controllerAs: 'vm',
         data: {
-          roles: ['user', 'admin'],
           pageTitle: 'Gallery'
         }
       });
