@@ -9,7 +9,7 @@
 
   function menuConfig(menuService) {
     // Set top bar menu items
-    menuService.addSubMenuItem('topbar','more', {
+    menuService.addMenuItem('topbar', {
       title: 'Gallery',
       state: 'gallery',
       roles: ['*']
