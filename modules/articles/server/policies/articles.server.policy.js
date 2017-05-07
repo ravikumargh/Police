@@ -26,6 +26,9 @@ exports.invokeRolesPolicies = function () {
     allows: [{
       resources: '/api/articles',
       permissions: ['get']
+    },{
+      resources: '/api/articles/top',
+      permissions: ['get']
     }, {
       resources: '/api/articles/:articleId',
       permissions: ['get']
@@ -34,6 +37,9 @@ exports.invokeRolesPolicies = function () {
     roles: ['guest'],
     allows: [{
       resources: '/api/articles',
+      permissions: ['get']
+    },{
+      resources: '/api/articles/top',
       permissions: ['get']
     }, {
       resources: '/api/articles/:articleId',

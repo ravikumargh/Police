@@ -3,7 +3,8 @@
 
   angular
     .module('articles.services')
-    .factory('ArticlesService', ArticlesService);
+    .factory('ArticlesService', ArticlesService)
+    .factory('ArticlesTopService', ArticlesTopService);
 
   ArticlesService.$inject = ['$resource', '$log'];
 
@@ -11,10 +12,10 @@
     var Article = $resource('/api/articles/:articleId', {
       articleId: '@_id'
     }, {
-      update: {
-        method: 'PUT'
-      }
-    });
+        update: {
+          method: 'PUT'
+        }
+      });
 
     angular.extend(Article.prototype, {
       createOrUpdate: function () {
@@ -49,5 +50,10 @@
       // Log error
       $log.error(error);
     }
+  }
+  function ArticlesTopService($resource, $log) {
+    var Article = $resource('/api/articles/top');
+    return Article;
+
   }
 }());

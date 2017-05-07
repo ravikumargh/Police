@@ -91,7 +91,20 @@ exports.list = function (req, res) {
     }
   });
 };
-
+/**
+ * List of Articles
+ */
+exports.top = function (req, res) {
+  Article.find().sort('-created').limit(3).populate('user', 'displayName').exec(function (err, articles) {
+    if (err) {
+      return res.status(422).send({
+        message: errorHandler.getErrorMessage(err)
+      });
+    } else {
+      res.json(articles);
+    }
+  });
+};
 /**
  * Article middleware
  */

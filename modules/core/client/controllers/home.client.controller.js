@@ -4,9 +4,11 @@
   angular
     .module('core')
     .controller('HomeController', HomeController);
+  HomeController.$inject = ['$scope', 'ArticlesTopService'];
 
-  function HomeController() {
+  function HomeController($scope,ArticlesTopService) {
     var vm = this;
+    vm.topArticles = ArticlesTopService.query();
     $(document).ready(function () {
       $('#demo1').slippry({
         // general elements & wrapper
