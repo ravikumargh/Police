@@ -1,0 +1,77 @@
+<div class="row" id="content-aboutus">
+    <!-- uncomment code for absolute positioning tweek see top comment in css -->
+    <!-- <div class="absolute-wrapper"> </div> -->
+    <!-- Menu -->
+    <div class="side-menu">
+        <nav class="navbar navbar-default" role="navigation">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <div class="brand-wrapper">
+                    <!-- Hamburger -->
+                    <button type="button" class="navbar-toggle" ng-click="vm.isCollapsed = !vm.isCollapsed">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+                    <!-- Brand -->
+                    <div class="brand-name-wrapper">
+                        <a class="navbar-brand" href="#">
+                   Traffic
+                </a>
+                    </div>
+
+
+                </div>
+
+            </div>
+ 
+            <div class="side-menu-container">
+                <ul class="nav navbar-nav" ng-class="{'slide-in' : vm.isCollapsed}">
+                    <li ng-repeat="filter in vm.filters" ng-click="vm.select($index)" ng-class="{active: $index == vm.selected}">
+                        <a data-ui-sref="{{filter.href}}"><span class="fa {{filter.icon}}"></span>&nbsp;{{filter.title}}</a>
+                    </li>
+                </ul>
+            </div>
+
+             
+            <!-- /.navbar-collapse -->
+        </nav>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container-fluid">
+        <div class="side-body" ng-class="{'body-slide-in' : vm.isCollapsed}" ui-view>
+            <!--<h1 class="page-header" id="glyphicons">Traffics</h1>-->
+
+            <div class="bs-callout bs-callout-info" id="callout-glyphicons-location">
+                <h4>Our Mission</h4>
+                <ul>
+                    <li>We aspire to be a world class Police traffic working in partnership with citizens and communities to
+                        prevent crime and road trauma, enhance public safety and maintain law and order.</li>
+                    <li>We will be proactive in our efforts, professional in our demeanour, always being conscious not to infringe
+                        on the rights guaranteed to all citizens by constitution.</li>
+                    <li>We are dedicated to protecting life, property and ensuring fair and equal treatment to everyone.</li>
+                    <li>We will always remember that we are the guardian of our community and we are committed to public traffic
+                        excellence by providing safe and secure environment.</li>
+                    <li>We strive towards boosting the morale and keeping the motivation and enthusiasm of our manpower at the
+                        highest possible levels.</li>
+                    <li>Our members are dedicated to the traffic they provide and their actions reflect pride In the department
+                        and community.</li>
+
+                </ul>
+            </div>
+            <div class="bs-callout bs-callout-danger" id="callout-glyphicons-location">
+                <h4>Our Vision</h4>
+                <ul>
+                    <li>We strive to protect our diverse and dynamic community with fairness, integrity and respect for the rights
+                        of the individua</li>
+                    <li>We resolve to develop a creative, forward looking workforce, dedicated to raising our level of excellence
+                        to meet the challenges of tomorrow.
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

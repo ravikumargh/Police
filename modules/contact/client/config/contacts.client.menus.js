@@ -8,11 +8,11 @@
   menuConfig.$inject = ['menuService'];
 
   function menuConfig(menuService) {
-     menuService.addMenuItem('topbar', {
-      title: 'Traffic',
-      state: 'traffic',      
-      roles: ['*']
-    });
+    //  menuService.addMenuItem('topbar', {
+    //   title: 'Traffic',
+    //   state: 'traffic',      
+    //   roles: ['*']
+    // });
     menuService.addMenuItem('topbar', {
       title: 'RTI',
       state: 'rti',      

@@ -2,15 +2,15 @@
   'use strict';
 
   angular
-    .module('organizations')
+    .module('traffics')
     .run(menuConfig);
 
   menuConfig.$inject = ['menuService'];
 
   function menuConfig(menuService) {
     menuService.addMenuItem('topbar', {
-      title: 'Organization',
-      state: 'organizations',
+      title: 'Traffic',
+      state: 'traffics',
       roles: ['*']
     });
  
