@@ -1,5 +1,5 @@
 .content {
-  margin-top: 100px;
+  margin-top: 115px;
 }
 @media (max-width: 767px){ 
  
@@ -8,6 +8,9 @@
   }
   .header-menu{
     margin-top: 0 !important;
+  }
+  .navbar-header #logo-main div{
+    margin: 0;
   }
  }
 
@@ -52,10 +55,13 @@ a:hover .header-profile-image {
   display: inline;
 }
 .header-menu{
-  margin-top: 50px;
+  margin-top: 65px;
 }
 .header-contacts{
   margin-bottom: 0;
+}
+#header-top .header-contacts{
+  height: 65px;
 }
 .header-contacts .navbar-right{
     margin: 0 20px;
@@ -84,11 +90,15 @@ a:hover .header-profile-image {
   color: #fff;
   padding: 0;
 }
+#logo-main div{
+ margin: 5px;
+}
 #logo-main #logo-sm-white{
   margin: 2px;
 }
 #logo-main .logo-text{
   margin: 5px;
+  font-size: 20px
 }
 /*Accordian*/
 .panel-group .panel {
