@@ -1,5 +1,5 @@
 .content {
-  margin-top: 115px;
+  margin-top: 165px;
 }
 @media (max-width: 767px){ 
  
@@ -11,6 +11,12 @@
   }
   .navbar-header #logo-main div{
     margin: 0;
+  }
+  .navbar-header #logo-main .logo-text{
+    color: #fff;
+    font-size: 20px;
+    margin: 5px;
+    padding-top: 5px;
   }
  }
 
@@ -55,13 +61,20 @@ a:hover .header-profile-image {
   display: inline;
 }
 .header-menu{
-  margin-top: 65px;
+  margin-top: 115px;
 }
 .header-contacts{
   margin-bottom: 0;
 }
 #header-top .header-contacts{
+  height: 50px;
+}
+#header-top .header-logo{
+  background-image: none;
+  background-color: white;
+  border-color: white;
   height: 65px;
+  margin-bottom: 0;
 }
 .header-contacts .navbar-right{
     margin: 0 20px;
@@ -87,7 +100,7 @@ a:hover .header-profile-image {
  
 
 #logo-main{
-  color: #fff;
+  color: #29654b;
   padding: 0;
 }
 #logo-main div{
