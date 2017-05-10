@@ -27,14 +27,14 @@
       //     pageTitle: 'Trafic'
       //   }
       // })
-      .state('aboutus', {
-        url: '/aboutus',
-        templateUrl: '/modules/contact/client/views/view-aboutus.client.view.html',
-        controllerAs: 'vm',
-        data: {
-          pageTitle: 'About Us'
-        }
-      })
+      // .state('aboutus', {
+      //   url: '/aboutus',
+      //   templateUrl: '/modules/contact/client/views/view-aboutus.client.view.html',
+      //   controllerAs: 'vm',
+      //   data: {
+      //     pageTitle: 'About Us'
+      //   }
+      // })
       .state('rti', {
         url: '/rti',
         templateUrl: '/modules/contact/client/views/view-rti.client.view.html',

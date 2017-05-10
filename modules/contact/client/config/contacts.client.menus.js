@@ -28,10 +28,10 @@
       state: 'contacts',      
       roles: ['*']
     });
-    menuService.addMenuItem('topbar', {
-      title: 'About Us',
-      state: 'aboutus',      
-      roles: ['*']
-    });
+    // menuService.addMenuItem('topbar', {
+    //   title: 'About Us',
+    //   state: 'aboutus',      
+    //   roles: ['*']
+    // });
   }
 }());
