@@ -1,6 +1,13 @@
 .content {
   margin-top: 165px;
 }
+.nav-up {
+    top: -45px;
+}
+#header-top{
+  transition: top 0.2s ease-in-out;
+}
+
 @media (max-width: 767px){ 
  
   .content {
