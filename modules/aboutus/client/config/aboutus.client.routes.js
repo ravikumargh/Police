@@ -21,9 +21,9 @@
             })
 
 
-            .state('aboutus.sakala', {
-                url: '/sakala',
-                templateUrl: '/modules/aboutus/client/views/view-aboutus.client.view.html',
+            .state('aboutus.citizensduties', {
+                url: '/duties-of-citizens',
+                templateUrl: '/modules/aboutus/client/views/view-citizensduties.client.view.html',
                 controller: 'AboutusController',
                 controllerAs: 'vm',
                 data: {

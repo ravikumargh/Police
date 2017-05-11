@@ -16,15 +16,23 @@
         vm.filters = [
             {
                 'title': 'Law and Order',
-                'href': 'aboutus.lawandorder'
+                'href': 'aboutus.lawandorder',
+                'icon': 'fa-book'
             },
             {
                 'title': 'Service at Police Station',
-                'href': 'aboutus.service'
+                'href': 'aboutus.service',
+                'icon': 'fa-binoculars'
             },
              {
                 'title': 'Citizens Rights',
-                'href': 'aboutus.citizensrights'
+                'href': 'aboutus.citizensrights',
+                'icon': 'fa-hand-stop-o'
+            },
+             {
+                'title': 'Duties of Citizens',
+                'href': 'aboutus.citizensduties',
+                'icon': 'fa-book'
             } 
         ];
         vm.selected = -1;

@@ -41,7 +41,7 @@
             <div class="side-menu-container ">
                 <ul class="nav navbar-nav " ng-class="{ 'slide-in' : vm.isCollapsed} ">
                     <li ng-repeat="filter in vm.filters " ng-click="vm.select($index) " ng-class="{active: $index==v m.selected} ">
-                        <a data-ui-sref="{{filter.href}} "><span class="fa fa-hand-stop-o "></span>{{filter.title}}</a>
+                        <a data-ui-sref="{{filter.href}} "><span class="fa {{filter.icon}}"></span> &nbsp;{{filter.title}}</a>
                     </li>
                 </ul>
             </div>

@@ -28,7 +28,7 @@
         // transitions
         transition: 'kenburns', // fade, horizontal, kenburns, false
         kenZoom: 140,
-        speed: 3000 // time the transition takes (ms)
+        speed: 6000 // time the transition takes (ms)
       });
     });
   }
