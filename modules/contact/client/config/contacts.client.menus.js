@@ -15,17 +15,20 @@
     // });
     menuService.addMenuItem('topbar', {
       title: 'RTI',
-      state: 'rti',      
+      state: 'rti',
+      position:3,      
       roles: ['*']
     });
     menuService.addMenuItem('topbar', {
       title: 'FAQ',
-      state: 'faq',      
+      state: 'faq',
+      position:4,      
       roles: ['*']
     });
     menuService.addMenuItem('topbar', {
       title: 'Contact Us',
-      state: 'contacts',      
+      state: 'contacts',
+      position:5,      
       roles: ['*']
     });
     // menuService.addMenuItem('topbar', {

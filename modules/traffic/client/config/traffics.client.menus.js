@@ -11,6 +11,7 @@
     menuService.addMenuItem('topbar', {
       title: 'Traffic',
       state: 'traffics',
+      position:10,
       roles: ['*']
     });
  

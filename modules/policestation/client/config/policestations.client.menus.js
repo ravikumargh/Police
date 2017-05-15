@@ -11,6 +11,7 @@
     menuService.addMenuItem('topbar', {
       title: 'Policestations',
       state: 'policestations',
+      position:8,
       roles: ['*']
     });
  

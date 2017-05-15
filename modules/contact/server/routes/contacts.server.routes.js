@@ -11,6 +11,8 @@ module.exports = function (app) {
   app.route('/api/contacts').all(contactsPolicy.isAllowed)
     .get(contacts.list)
     .post(contacts.create);
+    app.route('/api/sendmessage').all(contactsPolicy.isAllowed)
+    .post(contacts.sendmessage);
 
   // Single contact routes
   app.route('/api/contacts/:contactId').all(contactsPolicy.isAllowed)

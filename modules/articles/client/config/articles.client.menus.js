@@ -10,7 +10,8 @@
   function menuConfig(menuService) {
     menuService.addMenuItem('topbar', {
       title: 'Articles',
-      state: 'articles.list',      
+      state: 'articles.list',
+      position:2,      
       roles: ['*']
     });
 

@@ -4,11 +4,13 @@
   angular
     .module('core')
     .controller('HomeController', HomeController);
-  HomeController.$inject = ['$scope', 'ArticlesTopService'];
+  HomeController.$inject = ['$scope', 'ArticlesTopService', 'VideosTopService', 'TodaysAnnouncementsService'];
 
-  function HomeController($scope, ArticlesTopService) {
+  function HomeController($scope, ArticlesTopService, VideosTopService, TodaysAnnouncementsService) {
     var vm = this;
     vm.topArticles = ArticlesTopService.query();
+    vm.topVideos = VideosTopService.query();
+    vm.todaysAnnouncements = TodaysAnnouncementsService.query();
     $(document).ready(function () {
       $('#demo1').slippry({
         // general elements & wrapper

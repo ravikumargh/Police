@@ -6,7 +6,38 @@
 var path = require('path'),
   mongoose = require('mongoose'),
   Contact = mongoose.model('Contact'),
+  config = require(path.resolve('./config/config')),
+  nodemailer = require('nodemailer'),
   errorHandler = require(path.resolve('./modules/core/server/controllers/errors.server.controller'));
+
+var smtpTransport = nodemailer.createTransport(config.mailer.options);
+
+/**
+ * Create an contact
+ */
+exports.sendmessage = function (req, res) {
+
+  var mailOptions = {
+    to: 'ravikumargh13@gmail.com',
+    from: 'ravikumar.gh@excelindia.com',
+    subject: 'hi',
+    html: 'testing'
+  };
+  console.log(req.body);
+  smtpTransport.sendMail(mailOptions, function (err) {
+    if (!err) {
+      res.send({
+        message: 'An email has been sent to the provided email with further instructions.'
+      });
+    } else {
+      return res.status(400).send({
+        message: 'Failure sending email'
+      });
+    }
+
+    done(err);
+  });
+};
 
 /**
  * Create an contact

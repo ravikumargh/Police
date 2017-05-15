@@ -11,6 +11,7 @@
     menuService.addMenuItem('topbar', {
       title: 'Organization',
       state: 'organizations',
+      position:7,
       roles: ['*']
     });
  

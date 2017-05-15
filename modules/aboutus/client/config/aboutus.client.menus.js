@@ -11,6 +11,7 @@
     menuService.addMenuItem('topbar', {
       title: 'About us',
       state: 'aboutus',
+      position:1,
       roles: ['*']
     });
  

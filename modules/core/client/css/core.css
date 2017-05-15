@@ -178,6 +178,7 @@ a:hover .header-profile-image {
     color: #ff1d06;
     font-size: 18px;
     font-weight: bold;
+    max-height: 120px;
 }
 
 .marquee:hover {
@@ -190,3 +191,49 @@ a:hover .header-profile-image {
     100% { text-indent: -105em }
 }
  
+ /* Footer */
+
+.footer {
+  /*position: absolute;*/
+  bottom: 0;
+  padding-top: 5px;
+  width: 100%;
+  height: 60px;
+  background-color: #000;
+}
+
+.footer .social-icon {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer .social-icon li{
+  display: inline-block;
+  text-align: center;
+}
+
+.footer .social-icon a {
+  display: block;
+  width: 44px;
+  height: 44px;
+  line-height: 44px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.footer .social-icon a {
+  background: rgba(255, 255, 255, 0.85); /* social icon background color */
+  color: #000; /* social icon color */
+}
+
+.footer .social-icon a:hover {
+  background: rgba(255, 255, 255, 0.25); /* social icon hover background color */
+  color: #fff; /* social icon hover color */
+}
+.footer .copyright {
+    color: #fff;
+    line-height: 30px;
+    min-height: 30px;
+    padding: 7px 0;
+}

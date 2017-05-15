@@ -32,8 +32,9 @@
      - It also requires manual setting of the end text-indent
      - Everything below the /* Make it pretty */ comment is non-essential
      - Brought to you by @jonathansampson -->
-      <p class="marquee">ಡಿಸಿಬಿ ಪೊಲೀಸ್ ಠಾಣೆ ಮೊ.ಸಂ. 07/2017 : ಯಾರೋ ಒಬ್ಬ ಆಸಾಮಿ ಚೀಲದಲ್ಲಿ ಅಕ್ರಮವಾಗಿ ಮಧ್ಯವನ್ನು ಇಟ್ಟುಕೊಂಡು ಹೋಗುತ್ತಿರುವುದಾಗಿ ದೊರೆತ
-        ಮಾಹಿತಿ ಮೇರೆಗೆ ಸಿಬ್ಬಂದಿ ಹಾಗೂ ಪಂಚರೊಂದಿಗೆ ಸಂಜೆ 4-00 ಗಂಟೆಗೆ ದಾಳಿ ನಡೆಸಿದಾಗ ಆರೋಪಿ ಮಧ್ಯದ ಚೀಲವನ್ನು ಬಿಟ್ಟು ಓಡಿಹೋಗಿದ್ದು, ಚೀಲವನ್ನು.</p>
+      <!--<p class="marquee">ಡಿಸಿಬಿ ಪೊಲೀಸ್ ಠಾಣೆ ಮೊ.ಸಂ. 07/2017 : ಯಾರೋ ಒಬ್ಬ ಆಸಾಮಿ ಚೀಲದಲ್ಲಿ ಅಕ್ರಮವಾಗಿ ಮಧ್ಯವನ್ನು ಇಟ್ಟುಕೊಂಡು ಹೋಗುತ್ತಿರುವುದಾಗಿ ದೊರೆತ
+        ಮಾಹಿತಿ ಮೇರೆಗೆ ಸಿಬ್ಬಂದಿ ಹಾಗೂ ಪಂಚರೊಂದಿಗೆ ಸಂಜೆ 4-00 ಗಂಟೆಗೆ ದಾಳಿ ನಡೆಸಿದಾಗ ಆರೋಪಿ ಮಧ್ಯದ ಚೀಲವನ್ನು ಬಿಟ್ಟು ಓಡಿಹೋಗಿದ್ದು, ಚೀಲವನ್ನು.</p>-->
+        <p class="marquee" bind-html-compile="vm.todaysAnnouncements[0].content"></p>
     </div>
   </div>
   <!--
@@ -116,38 +117,15 @@
       </h1>
     </div>
 
-    <div class="col-md-4">
+    <div class="col-md-4" ng-repeat="video in vm.topVideos">
       <div class="panel panel-default">
         <div class="panel-heading">
-          <h4>ಅಪಘಾತದಲ್ಲಿ ಸಾವು ಪ್ರಕರಣ</h4>
+          <h4>{{video.title}}</h4>
         </div>
         <div class="panel-body embed-responsive embed-responsive-16by9">
-          <iframe src="//www.youtube.com/embed/D-r8f-GToac"></iframe>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          <h4>YouTube Player</h4>
-        </div>
-        <div class="panel-body embed-responsive embed-responsive-16by9">
-          <iframe src="//www.youtube.com/embed/D-r8f-GToac"></iframe>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          <h4>Big Buck Bunny</h4>
-        </div>
-        <div class="panel-body embed-responsive embed-responsive-16by9">
-          <iframe src="http://www.youtube.com/embed/D-r8f-GToac"></iframe>
+          <iframe src="{{video.link | trustAsResourceUrl}}"></iframe>
         </div>
       </div>
     </div>
   </div>
-
-  <br>Enjoy &amp; Keep Us Updated,
-  <br>The MEAN.JS Team.
 </section>
