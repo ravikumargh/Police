@@ -2,17 +2,16 @@
   <div class="page-header">
     <h1>Videos</h1>
   </div>
-  <div class="list-group">
-    <a ng-repeat="video in vm.videos" ui-sref="videos.view({ videoId: video._id })" class="list-group-item">
-      <small class="list-group-item-text">
-        Posted on
-        <span ng-bind="video.created | date:'mediumDate'"></span>
-        by
-        <span ng-if="video.user" ng-bind="video.user.displayName"></span>
-        <span ng-if="!video.user">Deleted User</span>
-      </small>
-      <h4 class="list-group-item-heading" ng-bind="video.title"></h4>
-      <p class="list-group-item-text" ng-bind="video.link"></p>
-    </a>
+  <div class="row">
+    <div class="col-md-4" data-ng-repeat="video in vm.videos">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 data-ng-bind="video.title"></h4>
+        </div>
+        <div class="panel-body embed-responsive embed-responsive-16by9">
+          <iframe src="{{video.link | trustAsResourceUrl}}"></iframe>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
