@@ -23,4 +23,5 @@
   <div class="alert alert-warning text-center" data-ng-if="articles.$resolved && !articles.length">
     No articles yet, why don't you <a data-ui-sref="admin.articles.create">create one</a>?
   </div>
+  <uib-pagination boundary-links="true" max-size="8" items-per-page="vm.itemsPerPage" total-items="vm.filterLength" ng-model="vm.currentPage" ng-change="vm.pageChanged()"></uib-pagination>
 </section>

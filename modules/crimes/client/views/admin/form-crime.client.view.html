@@ -1,0 +1,40 @@
+<section>
+  <div class="page-header">
+    <h1>{{vm.crime._id ? 'Edit Crime' : 'New Crime'}}</h1>
+  </div>
+  <div class="pull-right">
+    <a ng-show="vm.crime._id" class="btn btn-primary" ng-click="vm.remove()">
+      <i class="glyphicon glyphicon-trash"></i>
+    </a>
+  </div>
+  <div class="col-md-12">
+    <form name="vm.form.crimeForm" class="form-horizontal" ng-submit="vm.save(vm.form.crimeForm.$valid)" novalidate>
+      <fieldset>
+        <div class="form-group" show-errors>
+          <label class="control-label" for="title">Title</label>
+          <input name="title" type="text" ng-model="vm.crime.title" id="title" class="form-control" placeholder="Title" required autofocus>
+          <div ng-messages="vm.form.crimeForm.title.$error" role="alert">
+            <p class="help-block error-text" ng-message="required">Crime title is required.</p>
+          </div>
+           <label class="control-label" for="station">Police Station</label>
+          <input name="station" type="text" ng-model="vm.crime.station" id="station" class="form-control" placeholder="Police Station" required autofocus>
+          <div ng-messages="vm.form.crimeForm.station.$error" role="alert">
+            <p class="help-block error-text" ng-message="required">Police Station title is required.</p>
+          </div>
+           <label class="control-label" for="date">Date</label>
+         <input name="date" type="date" data-date-format="DD-MM-YYYY" ng-model="vm.crime.date" class="form-control" required autofocus>
+          <div ng-messages="vm.form.crimeForm.date.$error" role="alert">
+            <p class="help-block error-text" ng-message="required">Date is required.</p>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label" for="content">Content</label>
+          <div text-angular name="content" data-ng-model="vm.crime.content" id="content" ></div>
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn btn-default">{{vm.crime._id ? 'Update' : 'Create'}}</button>
+        </div>
+      </fieldset>
+    </form>
+  </div>
+</section>

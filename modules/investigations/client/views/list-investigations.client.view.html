@@ -1,0 +1,19 @@
+<section>
+  <div class="page-header">
+    <h1>IMV List</h1>
+  </div>
+  <div class="list-group">
+    <a ng-repeat="investigation in vm.investigations" ui-sref="investigations.view({ investigationId: investigation._id })" class="list-group-item">
+      <small class="list-group-item-text">
+        Posted on
+        <span ng-bind="investigation.created | date:'mediumDate'"></span>
+        by
+        <span ng-if="investigation.user" ng-bind="investigation.user.displayName"></span>
+        <span ng-if="!investigation.user">Deleted User</span>
+      </small>
+      <h4 class="list-group-item-heading" ng-bind="investigation.title"></h4>
+      <p class="list-group-item-text" bind-html-compile="investigation.case"></p>
+    </a>
+  </div>
+  <uib-pagination boundary-links="true" max-size="8" items-per-page="vm.itemsPerPage" total-items="vm.filterLength" ng-model="vm.currentPage" ng-change="vm.pageChanged()"></uib-pagination>
+</section>

@@ -1,0 +1,55 @@
+<section>
+  <div class="page-header">
+    <h1>{{vm.investigation._id ? 'Edit Investigation' : 'New Investigation'}}</h1>
+  </div>
+  <div class="pull-right">
+    <a ng-show="vm.investigation._id" class="btn btn-primary" ng-click="vm.remove()">
+      <i class="glyphicon glyphicon-trash"></i>
+    </a>
+  </div>
+  <div class="col-md-12">
+    <form name="vm.form.investigationForm" class="form-horizontal" ng-submit="vm.save(vm.form.investigationForm.$valid)" novalidate>
+      <fieldset>
+        <div class="form-group" show-errors>
+          <label class="control-label" for="title">Title</label>
+          <input name="title" type="text" ng-model="vm.investigation.title" id="title" class="form-control" placeholder="Title" required autofocus>
+          <div ng-messages="vm.form.investigationForm.title.$error" role="alert">
+            <p class="help-block error-text" ng-message="required">investigation title is required.</p>
+          </div>
+           <label class="control-label" for="station">Police Station</label>
+          <input name="station" type="text" ng-model="vm.investigation.station" id="station" class="form-control" placeholder="Police Station" required autofocus>
+          <div ng-messages="vm.form.investigationForm.station.$error" role="alert">
+            <p class="help-block error-text" ng-message="required">Police Station title is required.</p>
+          </div>
+           <label class="control-label" for="date">Date</label>
+         <input name="date" type="date" data-date-format="DD-MM-YYYY" ng-model="vm.investigation.date" class="form-control" required autofocus>
+          <div ng-messages="vm.form.investigationForm.date.$error" role="alert">
+            <p class="help-block error-text" ng-message="required">Date is required.</p>
+          </div>
+
+        <label class="control-label" for="case">Case</label>
+        <input name="case" type="text" ng-model="vm.investigation.case" id="case" class="form-control" placeholder="Case" required autofocus>
+        <div ng-messages="vm.form.investigationForm.case.$error" role="alert">
+          <p class="help-block error-text" ng-message="required">case is required.</p>
+        </div>
+
+        <label class="control-label" for="amount">Amount</label>
+        <input name="amount" type="text" ng-model="vm.investigation.amount" id="amount" class="form-control" placeholder="Amount" required autofocus>
+        <div ng-messages="vm.form.investigationForm.amount.$error" role="alert">
+          <p class="help-block error-text" ng-message="required">amount is required.</p>
+        </div>
+
+        <label class="control-label" for="vehicleInfo">Vehicle Info</label>
+        <input name="vehicleInfo" type="text" ng-model="vm.investigation.vehicleInfo" id="vehicleInfo" class="form-control" placeholder="vehicle Info" required autofocus>
+        <div ng-messages="vm.form.investigationForm.vehicleInfo.$error" role="alert">
+          <p class="help-block error-text" ng-message="required">vehicle Information is required.</p>
+        </div>
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn btn-default">{{vm.investigation._id ? 'Update' : 'Create'}}</button>
+        </div>
+      </fieldset>
+
+    </form>
+  </div>
+</section>

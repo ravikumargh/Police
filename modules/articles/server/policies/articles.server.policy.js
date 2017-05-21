@@ -17,9 +17,6 @@ exports.invokeRolesPolicies = function () {
     allows: [{
       resources: '/api/articles',
       permissions: '*'
-    },{
-      resources: '/api/articles/top',
-      permissions: '*'
     }, {
       resources: '/api/articles/:articleId',
       permissions: '*'

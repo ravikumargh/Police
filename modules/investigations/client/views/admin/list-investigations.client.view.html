@@ -1,0 +1,27 @@
+﻿<section>
+  <div class="page-header">
+    <h1>
+      Investigations
+      <a class="btn btn-primary pull-right" data-ui-sref="admin.investigations.create">
+        <i class="glyphicon glyphicon-plus"></i>
+      </a>
+    </h1>
+  </div>
+  <div class="list-group">
+    <a data-ng-repeat="investigation in vm.investigations" data-ui-sref="admin.investigations.edit({investigationId: investigation._id})" class="list-group-item">
+      <small class="list-group-item-text">
+        Posted on
+        <span data-ng-bind="investigation.created | date:'mediumDate'"></span>
+        by
+        <span ng-if="investigation.user" ng-bind="investigation.user.displayName"></span>
+        <span ng-if="!investigation.user">Deleted User</span>
+      </small>
+      <h4 class="list-group-item-heading" data-ng-bind="investigation.title"></h4>
+      <p class="list-group-item-text" bind-html-compile="investigation.case"></p>
+    </a>
+  </div>
+  <div class="alert alert-warning text-center" data-ng-if="vm.investigations.$resolved && !vm.investigations.length">
+    No investigation yet, why don't you <a data-ui-sref="admin.investigations.create">create one</a>?
+  </div>
+  <uib-pagination boundary-links="true" max-size="8" items-per-page="vm.itemsPerPage" total-items="vm.filterLength" ng-model="vm.currentPage" ng-change="vm.pageChanged()"></uib-pagination>
+</section>

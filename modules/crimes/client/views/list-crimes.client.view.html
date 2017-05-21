@@ -1,0 +1,19 @@
+<section>
+  <div class="page-header">
+    <h1>Crimes</h1>
+  </div>
+  <div class="list-group">
+    <a ng-repeat="crime in vm.crimes" ui-sref="crimes.view({ crimeId: crime._id })" class="list-group-item">
+      <small class="list-group-item-text">
+        Posted on
+        <span ng-bind="crime.created | date:'mediumDate'"></span>
+        by
+        <span ng-if="crime.user" ng-bind="crime.user.displayName"></span>
+        <span ng-if="!crime.user">Deleted User</span>
+      </small>
+      <h4 class="list-group-item-heading" ng-bind="crime.title"></h4>
+      <p class="list-group-item-text" bind-html-compile="crime.content"></p>
+    </a>
+  </div>
+  <uib-pagination boundary-links="true" max-size="8" items-per-page="vm.itemsPerPage" total-items="vm.filterLength" ng-model="vm.currentPage" ng-change="vm.pageChanged()"></uib-pagination>
+</section>

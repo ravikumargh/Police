@@ -1,0 +1,27 @@
+﻿<section>
+  <div class="page-header">
+    <h1>
+      Crimes
+      <a class="btn btn-primary pull-right" data-ui-sref="admin.crimes.create">
+        <i class="glyphicon glyphicon-plus"></i>
+      </a>
+    </h1>
+  </div>
+  <div class="list-group">
+    <a data-ng-repeat="crime in vm.crimes" data-ui-sref="admin.crimes.edit({crimeId: crime._id})" class="list-group-item">
+      <small class="list-group-item-text">
+        Posted on
+        <span data-ng-bind="crime.created | date:'mediumDate'"></span>
+        by
+        <span ng-if="crime.user" ng-bind="crime.user.displayName"></span>
+        <span ng-if="!crime.user">Deleted User</span>
+      </small>
+      <h4 class="list-group-item-heading" data-ng-bind="crime.title"></h4>
+      <p class="list-group-item-text" bind-html-compile="crime.content"></p>
+    </a>
+  </div>
+  <div class="alert alert-warning text-center" data-ng-if="vm.crimes.$resolved && !vm.crimes.length">
+    No crimes yet, why don't you <a data-ui-sref="admin.crimes.create">create one</a>?
+  </div>
+  <uib-pagination boundary-links="true" max-size="8" items-per-page="vm.itemsPerPage" total-items="vm.filterLength" ng-model="vm.currentPage" ng-change="vm.pageChanged()"></uib-pagination>
+</section>

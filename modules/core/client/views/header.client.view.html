@@ -1,5 +1,5 @@
-<div class="container" ng-controller="HeaderController as vm">
-<!--<div class="hidden-xs"><div>Call us: 08262 230403</div></div>-->
+<div class="" ng-controller="HeaderController as vm">
+<!--<div class="hidden-xs"><div>Call us: 080 22942700</div></div>-->
 
 
   <div class="navbar-header">
@@ -17,7 +17,7 @@
         <div aria-hidden="true">Bangalore City Police</div>
       </div>
     </a>
-    
+
   </div>
   <nav class="navbar-collapse" uib-collapse="!vm.isCollapsed" role="navigation">
     <ul class="nav navbar-nav" ng-if="vm.menu.shouldRender(vm.authentication.user);">
@@ -31,7 +31,7 @@
         <a ng-switch-default ui-sref="{{item.state}}" ng-bind="item.title"></a>
       </li>
     </ul>
-    <ul class="nav navbar-nav navbar-right" ng-hide="vm.authentication.user">
+    <ul class="nav navbar-nav navbar-right pr-1" ng-hide="vm.authentication.user">
       <li ui-sref-active="active">
         <a ui-sref="authentication.signup">Sign Up</a>
       </li>

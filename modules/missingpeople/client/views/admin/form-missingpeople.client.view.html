@@ -1,0 +1,111 @@
+<section>
+  <div class="page-header">
+    <h1>{{vm.missingpeople._id ? 'Edit Missing People' : 'New Missing people'}}</h1>
+  </div>
+  <div class="row">
+    <div class="pull-right">
+      <a ng-show="vm.missingpeople._id" class="btn btn-primary" ng-click="vm.remove()">
+        <i class="glyphicon glyphicon-trash"></i>
+      </a>
+    </div>
+
+  </div>
+  <div class="row">
+    <div class="col-md-2">
+      <div class="row text-center">
+        <div class="col-md-12 text-center">
+        <img ngf-src="vm.fileSelected ? picFile : vm.missingpeople.profileImageURL " alt="{{vm.missingpeople.displayName}}" class="img-thumbnail user-profile-picture" ngf-drop>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+      <div ng-show="vm.loading" class="col-md-12 text-center">
+        <img ng-src="/modules/core/client/img/loaders/loader.gif" height="50" width="50" alt="Loading image...">
+      </div>
+        <div ng-show="!vm.fileSelected" class="col-md-12 text-center">
+          <button class="btn btn-default btn-block" ngf-select="(vm.fileSelected = true) && (vm.loading = false)" ng-model="picFile" accept="image/*" ngf-before-model-change="vm.loading = true">Select Image</button>
+        </div>
+          <div ng-show="vm.fileSelected" class="col-md-12 text-center">
+            <button type="button" class="btn btn-primary btn-block" ng-click="vm.upload(picFile)">Upload This Picture</button>
+            <button type="button" class="btn btn-default btn-block" ng-click="vm.fileSelected = false">Cancel</button>
+          </div>
+
+        <div class="col-md-12">
+          <br>
+          <div ng-show="vm.fileSelected" class="progress text-center">
+        <div class="progress-bar" role="progressbar" aria-valuenow="{{vm.progress}}" aria-valuemin="0" aria-valuemax="100" style="width:{{vm.progress}}%" ng-bind="vm.progress + '%'">
+          <span class="sr-only">{{vm.progress}}% Complete</span>
+        </div>
+        </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-10">
+      <form name="vm.form.mPeopleForm" class="form-horizontal" ng-submit="vm.save(vm.form.mPeopleForm.$valid)" novalidate enctype="multipart/form-data">
+        <fieldset>
+          <div class="form-group" show-errors>
+            <label class="control-label" for="title">Name</label>
+            <input name="title" type="text" ng-model="vm.missingpeople.title" id="title" class="form-control" placeholder="Title" required autofocus>
+            <div ng-messages="vm.form.mPeopleForm.title.$error" role="alert">
+              <p class="help-block error-text" ng-message="required">missingpeople title is required.</p>
+            </div>
+
+            <label class="control-label" for="title">Address</label>
+            <textarea  ng-model="vm.missingpeople.address" id="address" class="form-control" required></textarea>
+            <div ng-messages="vm.form.mPeopleForm.address.$error" role="alert">
+              <p class="help-block error-text" ng-message="required">missingpeople address is required.</p>
+            </div>
+
+
+            <label class="control-label" for="station">Police Station</label>
+            <input name="station" type="text" ng-model="vm.missingpeople.station" id="station" class="form-control" placeholder="Police Station" required>
+            <div ng-messages="vm.form.mPeopleForm.station.$error" role="alert">
+              <p class="help-block error-text" ng-message="required">Police Station title is required.</p>
+            </div>
+            <label class="control-label" for="date">Date of Missing</label>
+            <input name="date" type="date" data-date-format="DD-MM-YYYY" ng-model="vm.missingpeople.date" class="form-control" required>
+            <div ng-messages="vm.form.mPeopleForm.date.$error" role="alert">
+              <p class="help-block error-text" ng-message="required">Date is required.</p>
+            </div>
+
+            <label class="control-label" for="case">Missing Place</label>
+            <input name="missingPlace" type="text" ng-model="vm.missingpeople.missingPlace" id="missingPlace" class="form-control" placeholder="Missing Place" required>
+            <div ng-messages="vm.form.mPeopleForm.missingPlace.$error" role="alert">
+              <p class="help-block error-text" ng-message="required">MissingPlace is required.</p>
+            </div>
+
+            <label class="control-label" for="content">Description of missing </label>
+            <div text-angular name="content" data-ng-model="vm.missingpeople.content" id="content" ></div>
+            <div ng-messages="vm.form.mPeopleForm.content.$error" role="alert">
+              <p class="help-block error-text" ng-message="required">Description of missing is required.</p>
+            </div>
+
+            <label class="control-label" for="amount">DDR/FIR No</label>
+            <input name="firnumber" type="text" ng-model="vm.missingpeople.firnumber" id="amount" class="form-control" placeholder="DDR/FIR No" required>
+            <div ng-messages="vm.form.mPeopleForm.firnumber.$error" role="alert">
+              <p class="help-block error-text" ng-message="required">FIR NO is required.</p>
+            </div>
+
+            <label class="control-label" for="date">DDR/FIR Date</label>
+            <input name="firdate" type="date" data-date-format="DD-MM-YYYY" ng-model="vm.missingpeople.firdate" class="form-control" required>
+            <div ng-messages="vm.form.mPeopleForm.firdate.$error" role="alert">
+              <p class="help-block error-text" ng-message="required">DDR/FIR Date is required.</p>
+            </div>
+
+
+
+
+
+            <div class="form-group">
+              <button type="submit" class="btn btn-default">{{vm.missingpeople._id ? 'Update' : 'Create'}}</button>
+            </div>
+
+          </div>
+        </fieldset>
+
+      </form>
+    </div>
+  </div>
+
+
+</section>
