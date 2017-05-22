@@ -16,19 +16,19 @@
     menuService.addMenuItem('topbar', {
       title: 'RTI',
       state: 'rti',
-      position:3,      
+      position:6,      
       roles: ['*']
     });
     menuService.addMenuItem('topbar', {
       title: 'FAQ',
       state: 'faq',
-      position:4,      
+      position:7,      
       roles: ['*']
     });
     menuService.addMenuItem('topbar', {
       title: 'Contact Us',
       state: 'contacts',
-      position:5,      
+      position:8,      
       roles: ['*']
     });
     // menuService.addMenuItem('topbar', {

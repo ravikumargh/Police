@@ -1,0 +1,38 @@
+<section>
+    <div class="page-header">
+        <h1>{{vm.gallery._id ? 'Edit Photo' : 'Add New Photo'}}</h1>
+    </div>
+    <div class="pull-right">
+        <a ng-show="vm.gallery._id" class="btn btn-primary" ng-click="vm.remove()">
+      <i class="glyphicon glyphicon-trash"></i>
+    </a>
+    </div>
+    <div class="col-md-12">
+        <form name="vm.form.galleryForm" class="form-horizontal" ng-submit="vm.save(vm.form.galleryForm.$valid)" novalidate>
+            <fieldset>
+                <div class="form-group text-center">
+                    <img ngf-src="picFile" alt="{{vm.user.displayName}}" class="img-thumbnail"
+                        ngf-drop>
+                </div>
+                <div ng-show="vm.loading" class="form-group text-center">
+                    <img ng-src="/modules/core/client/img/loaders/loader.gif" height="50" width="50" alt="Loading image...">
+                </div>
+                <div ng-show="!vm.fileSelected" class="text-center form-group">
+                    <button class="btn btn-default btn-file" ngf-select="(vm.fileSelected = true) && (vm.loading = false)" ng-model="picFile"
+                        accept="image/*" ngf-before-model-change="vm.loading = true" ngf-resize="{width: 400}" ngf-resize-if="$width > 400 || $height > 400">Select Picture</button>
+                </div>
+                <div ng-show="vm.fileSelected" class="text-center form-group">
+                    <button class="btn btn-primary" ng-click="vm.upload(picFile)">Use This Picture</button>
+                    <button class="btn btn-default" ng-click="vm.fileSelected = false">Cancel</button>
+                </div>
+                <div ng-show="vm.fileSelected" class="progress text-center">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="{{vm.progress}}" aria-valuemin="0" aria-valuemax="100" style="width:{{vm.progress}}%"
+                        ng-bind="vm.progress + '%'">
+                        <span class="sr-only">{{vm.progress}}% Complete</span>
+                    </div>
+                </div>
+ 
+            </fieldset>
+        </form>
+    </div>
+</section>

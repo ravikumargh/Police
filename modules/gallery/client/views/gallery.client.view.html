@@ -1,24 +1,15 @@
+
 <!-- The chat view -->
-<section class="container">
+<section class="container" ng-init="vm.init()">
   <div class="page-header">
     <h1>Photo Gallery</h1>
   </div>
-  <div id="lightgallery">
-    <a href="/modules/gallery/client/img/img1.jpg">
-      <img src="/modules/gallery/client/img/thumb-1.jpg" />
+
+  <div id="lightgallery" class="row">
+    <a data-ng-repeat="gallery in vm.gallery"  href="{{'/' + gallery.imageURL}}" class="col-md-3">
+    <div class="form-group text-center">
+          <img ngf-src="'/' + gallery.imageURL" alt="{{vm.user.displayName}}" class="img-thumbnail user-profile-picture" >
+  </div>
     </a>
-    <a href="/modules/gallery/client/img/img2.jpg">
-      <img src="/modules/gallery/client/img/thumb-2.jpg" />
-    </a>
-     <a href="/modules/gallery/client/img/img3.jpg">
-      <img src="/modules/gallery/client/img/thumb-3.jpg" />
-    </a>
-     <a href="/modules/gallery/client/img/img4.jpg">
-      <img src="/modules/gallery/client/img/thumb-4.jpg" />
-    </a>
-         <a href="/modules/gallery/client/img/img5.jpg">
-      <img src="/modules/gallery/client/img/thumb-5.jpg" />
-    </a>
-	
   </div>
 </section>

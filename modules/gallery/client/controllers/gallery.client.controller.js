@@ -3,22 +3,21 @@
 
   angular
     .module('gallery')
+
     .controller('GalleryController', GalleryController);
 
-  GalleryController.$inject = ['$scope'];
+  GalleryController.$inject = ['$scope', '$timeout', 'GalleryService'];
 
-  function GalleryController($scope) {
+  function GalleryController($scope, $timeout, GalleryService) {
     var vm = this;
- 
 
-    init();
-
-    function init() {
-       $(document).ready(function() {
-        $("#lightgallery").lightGallery(); 
-    });
+    vm.gallery = GalleryService.query();
+    vm.init = function () {
+      angular.element(document).ready(function () {
+        window.setTimeout(function () {
+          $("#lightgallery").lightGallery();
+        }, 1000);
+      });
     }
-
-     
   }
 }());

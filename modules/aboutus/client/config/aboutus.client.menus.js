@@ -11,7 +11,14 @@
     menuService.addMenuItem('topbar', {
       title: 'About us',
       state: 'aboutus',
+      type: 'dropdown',
       position:1,
+      roles: ['*']
+    });
+
+    menuService.addSubMenuItem('topbar', 'aboutus', {
+      title: 'About us',
+      state: 'aboutus',
       roles: ['*']
     });
  
