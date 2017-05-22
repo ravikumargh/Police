@@ -11,10 +11,20 @@
     menuService.addMenuItem('topbar', {
       title: 'Traffic',
       state: 'traffics',
+      type: 'dropdown',
       position:3,
       roles: ['*']
     });
- 
+  menuService.addSubMenuItem('topbar', 'traffics', {
+      title: 'Traffic',
+      state: 'traffics',
+      roles: ['*']
+    });
+     menuService.addSubMenuItem('topbar', 'traffics', {
+      title: 'IMV',
+      state: 'investigations.list',
+      roles: ['*']
+    });
   }
 }());
 
