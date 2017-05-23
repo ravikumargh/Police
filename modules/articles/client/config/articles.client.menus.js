@@ -9,7 +9,7 @@
 
   function menuConfig(menuService) {
     menuService.addMenuItem('topbar', {
-      title: 'Articles',
+      title: 'News & Updates',
       state: 'articles.list',  
       position:4,    
       roles: ['*']

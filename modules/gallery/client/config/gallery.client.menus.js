@@ -13,7 +13,7 @@
       title: 'Gallery',
       state: 'gallery',
       type: 'dropdown',
-      position:5,
+      position:7,
       roles: ['*']
     });
 

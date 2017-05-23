@@ -9,8 +9,9 @@
 
   function menuConfig(menuService) {
     menuService.addMenuItem('topbar', {
-      title: 'MP',
-      state: 'missingpeople.list',
+      title: 'Missing People',
+      state: 'missingpeople.list',      
+      position:6,    
       roles: ['*']
     });
   }

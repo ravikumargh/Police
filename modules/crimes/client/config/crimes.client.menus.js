@@ -10,7 +10,8 @@
   function menuConfig(menuService) {
     menuService.addMenuItem('topbar', {
       title: 'Crimes',
-      state: 'crimes.list',
+      state: 'crimes.list',      
+      position:5,    
       roles: ['*']
     });
   }
